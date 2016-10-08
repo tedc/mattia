@@ -1,0 +1,102 @@
+$frt_btn_padding_70h: 2.2em 0.8em;
+
+$frt_btn_border_thickness: 0.20em;
+$frt_btn_border_color: #262626;
+$frt_btn_2nd_border_thickness: 0.313em;
+
+$frt_btn_animation: ease-out;
+$frt_btn_animation_time: 0.4s;
+
+
+.frt_btn_wrapper{
+
+  background-image: url("../img/strips.png");
+  position:relative;
+  -webkit-transition: all $frt_btn_animation_time $frt_btn_animation;
+  -moz-transition: all $frt_btn_animation_time $frt_btn_animation;
+  -o-transition: all $frt_btn_animation_time $frt_btn_animation;
+  transition: all $frt_btn_animation_time $frt_btn_animation;
+  z-index: 2;
+  .frt_btn{
+    border: solid $frt_btn_border_thickness $frt_btn_border_color;
+    padding:$frt_btn_padding_70h;
+    background-color:white;
+    position:relative;
+    top:$frt_btn_2nd_border_thickness*(-1);
+    left:$frt_btn_2nd_border_thickness;
+    width: 100%;
+    text-transform: uppercase;
+
+    .label_button {
+      text-transform: uppercase;
+      font-size: 0.875em;
+      font-weight: 400;
+      letter-spacing: $letter-spacing-btn;
+    }
+
+    .icon_button {
+      font-size: 1.875em;
+      color: $blue;
+      margin-right: 0.5em;
+    }
+
+  }
+
+  &:hover{
+    background-color: #000000;
+
+
+    .frt_btn{
+      border-color: #0086ff;
+      background-color: #0086ff;
+      color: white;
+
+      .label_button{
+        color: white;
+      }
+      .icon_button{
+        color: white;
+      }
+    }
+
+  }
+
+
+  /*
+             _   _
+  ___  _ __ | |_(_) ___  _ __  ___
+ / _ \| '_ \| __| |/ _ \| '_ \/ __|
+| (_) | |_) | |_| | (_) | | | \__ \
+ \___/| .__/ \__|_|\___/|_| |_|___/
+      |_|
+
+ */
+
+  &.active{
+    .frt_btn {
+      border-color: #fff !important;
+    }
+    .label_button{
+      @extend .font_thin;
+    }
+  }
+
+
+
+
+  &._400px{
+    width: 400px;
+  }
+
+  &._240px{
+    width: 15.000em;
+  }
+
+  &._200px{
+    width: 200px;
+  }
+
+}
+
+
+
